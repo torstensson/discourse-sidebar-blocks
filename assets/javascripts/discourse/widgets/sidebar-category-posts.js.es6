@@ -47,10 +47,14 @@ export default createWidget('sidebar-category-posts', {
     if (state.loading) {
       result.push(h('div.spinner-container', h('div.spinner')));
     } else if (state.topics.length > 0) {
+      var category = Discourse.Category.findBySlug(attrs.category);
+      result.push(h('div', {innerHTML: categoryBadgeHTML(category)}));
       var tpl = attrs.thumbnails ? 'sidebar-post-item-thumbnail' : 'sidebar-post-item';
       const topicItems = state.topics.map(t => this.attach(tpl, t));
       result.push(h('div', [topicItems]));
     } else {
+      var category = Discourse.Category.findBySlug(attrs.category);
+      result.push(h('div', {innerHTML: categoryBadgeHTML(category)}));
       result.push(h('div.no-messages', 'No posts found.'))
     }
 
