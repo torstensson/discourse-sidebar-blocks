@@ -24,7 +24,6 @@ html:not(.mobile-view) {
     width: 22%;
     float: right;
   }
-
   .sidebar-category-posts {
     margin-bottom: 30px;
 
@@ -113,5 +112,27 @@ html:not(.mobile-view) {
 
   .sidebar-custom-content {
     margin-bottom: 30px;
+  }
+
+  .sidebar-leaderboard {
+    td {
+      .username {
+        padding-left: 40px;
+        padding-top: 3%;
+      }
+
+      .useravatar {
+        float: left;
+      }
+    }
+
+    .points {
+      margin-left: 30px;
+    }
+
+    .fa-heart, .d-icon-heart {
+      color: red;
+      padding-right: 0.5em;
+    }
   }
 }

@@ -16,6 +16,7 @@ export default createWidget('sidebar-items', {
     var thumbnails = false;
 
     sidebarBlocks.map(function(item) {
+
       switch(item) {
           case 'latest_replies':
               result.push(self.attach('sidebar-latest-replies'));

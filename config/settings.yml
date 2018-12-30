@@ -20,3 +20,9 @@ plugins:
     client: true
     type: list
     default: false
+  sidebar_leaderboard_count:
+    default: '5'
+    client: true
+  sidebar_leaderboard_period:
+    default: 'daily'
+    client: true
