@@ -1,22 +1,21 @@
 import { createWidget } from 'discourse/widgets/widget';
 import { h } from 'virtual-dom';
 
-export default createWidget('sidebar-items', {
-  tagName: 'div.sidebar-items',
-  buildKey: () => 'sidebar-first',
+export default createWidget('sidebar-secondary', {
+  tagName: 'div.sidebar-secondary',
+  buildKey: () => 'sidebar-second',
 
   html(attrs, state) {
-  	if (!Discourse.SiteSettings.sidebar_enable || this.site.mobileView)
+  	if (!Discourse.SiteSettings.sidebar_enable_second_col || this.site.mobileView)
   		return;
 
-    var sidebarBlocks = Discourse.SiteSettings.sidebar_block_order.split("|");
+    var sidebarBlocks = Discourse.SiteSettings.sidebar_block_order_second_col.split("|");
 
     const result = [];
     var self = this;
     var thumbnails = false;
 
     sidebarBlocks.map(function(item) {
-
       switch(item) {
           case 'latest_replies':
               result.push(self.attach('sidebar-latest-replies'));
@@ -49,4 +48,5 @@ export default createWidget('sidebar-items', {
 
     return result;
   },
+
 });

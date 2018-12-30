@@ -10,6 +10,20 @@ html:not(.mobile-view) {
     float: left;
   }
 
+  .list-container.has-sidebar.has-secondary-sidebar {
+    width: 46%;
+  }
+
+  .has-sidebar.has-secondary-sidebar + .sidebar {
+    width: 26%;
+    float: right;
+    margin-left: 3%;
+  }
+
+  .has-sidebar.has-secondary-sidebar + .sidebar + .sidebar-secondary {
+    width: 22%;
+    float: right;
+  }
   .sidebar-category-posts {
     margin-bottom: 30px;
 
@@ -18,10 +32,14 @@ html:not(.mobile-view) {
       padding-bottom: 8px;
     }
 
-    .sidebar-post-item {
+    .sidebar-post-item, .sidebar-post-item-thumbnail {
       padding-bottom: 6px;
       border-bottom: 1px solid #F2F2F2;
       margin-bottom: 6px;
+
+      img {
+        max-width: 100%;
+      }
     }
 
     span.comment_count {
@@ -82,6 +100,7 @@ html:not(.mobile-view) {
     > span.excerpt {
       margin-right: 35px;
       display: block;
+      word-wrap: break-word;
     }
 
     a.item-title {
