@@ -9,7 +9,7 @@ createWidget('sidebar-post-item', {
     return [
       h('a.item-title', {
         attributes: { href: url}
-      }, attrs.fancy_title),
+      }, attrs.unicode_title),
       h('span.comment_count', {}, attrs.posts_count - 1),
     ]
   },
