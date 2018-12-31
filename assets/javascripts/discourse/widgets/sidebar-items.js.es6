@@ -24,6 +24,9 @@ export default createWidget('sidebar-items', {
           case 'custom_html':
               result.push(self.attach('sidebar-custom-content'));
               break;
+          case 'leaderboard':
+              result.push(self.attach('sidebar-leaderboard'));
+              break;          
           default:
             var props = {};
             props.thumbnails = item.includes(':thumbnails') ? true : false;
