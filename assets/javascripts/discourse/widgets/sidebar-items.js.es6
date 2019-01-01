@@ -21,12 +21,15 @@ export default createWidget('sidebar-items', {
           case 'latest_replies':
               result.push(self.attach('sidebar-latest-replies'));
               break;
-          case 'custom_html' || 'custom_html_2':
+          case 'custom_html':
               result.push(self.attach('sidebar-custom-content'));
               break;
+          case 'custom_html_2':
+              result.push(self.attach('sidebar-custom-content-2'));
+              break;          
           case 'leaderboard':
               result.push(self.attach('sidebar-leaderboard'));
-              break;          
+              break;
           default:
             var props = {};
             props.thumbnails = item.includes(':thumbnails') ? true : false;
