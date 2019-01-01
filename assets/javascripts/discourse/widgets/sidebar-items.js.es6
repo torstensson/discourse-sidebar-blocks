@@ -21,7 +21,7 @@ export default createWidget('sidebar-items', {
           case 'latest_replies':
               result.push(self.attach('sidebar-latest-replies'));
               break;
-          case 'custom_html':
+          case 'custom_html' || 'custom_html_2':
               result.push(self.attach('sidebar-custom-content'));
               break;
           case 'leaderboard':
