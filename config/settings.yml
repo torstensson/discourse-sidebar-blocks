@@ -10,6 +10,10 @@ plugins:
     type: text
     default: ''
     client: true
+  sidebar_custom_content_2:
+    type: text
+    default: ''
+    client: true  
   sidebar_num_results:
     default: '6'
     client: true
