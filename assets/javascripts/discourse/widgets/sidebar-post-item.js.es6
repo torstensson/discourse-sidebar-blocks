@@ -12,7 +12,7 @@ createWidget('sidebar-post-item', {
       }, attrs.title),
       h('span.comment_count', {}, attrs.posts_count - 1),
 //      h('span.avatar', this.attach('post-avatar', attrs)),
-      h('span.excerpt', attrs.excerpt),
+//      h('span.excerpt', attrs.excerpt),
     ]
   },
 });
